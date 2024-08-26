@@ -77,7 +77,7 @@ ingress {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
     
-}
+  }
 }
 
 #Lanuch Instance
@@ -89,3 +89,6 @@ resource "aws_instance" "prod" {
     vpc_security_group_ids = [aws_security_group.allow_tls.id]
   
 }
+
+
+
