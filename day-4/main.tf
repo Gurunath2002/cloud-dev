@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "dev" {
-    bucket = "naresh_devops_awss"
+    bucket = "naresh_devops_awsdevops"
   
 }
 resource "aws_s3_bucket_versioning" "versioning_ecample" {
