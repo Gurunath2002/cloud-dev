@@ -6,7 +6,7 @@ provider "aws" {
 
 resource "aws_key_pair" "example" {
   key_name   = "file"  # Replace with your desired key name
-  public_key = file("~/.ssh/id_rsa.pub") 
+  public_key = file("~/.ssh/id_ed25519.pub") 
 
 
 }
@@ -82,7 +82,7 @@ resource "aws_instance" "server" {
     type        = "ssh"
     user        = "ubuntu"  # Replace with the appropriate username for your EC2 instance
     # private_key = file("C:/Users/veerababu/.ssh/id_rsa")
-    private_key = file("~/.ssh/id_rsa")  #private key path
+    private_key = file("~/.ssh/id_ed25519")  #private key path
     host        = self.public_ip
   }
   # local execution procee 
